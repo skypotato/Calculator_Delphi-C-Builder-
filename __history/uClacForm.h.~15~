@@ -1,0 +1,44 @@
+//---------------------------------------------------------------------------
+
+#ifndef uClacFormH
+#define uClacFormH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <Vcl.ComCtrls.hpp>
+#include <Vcl.ToolWin.hpp>
+#include <Vcl.ExtCtrls.hpp>
+#include "UNumberFrame.hpp"
+#include <System.ImageList.hpp>
+#include <Vcl.ImgList.hpp>
+//---------------------------------------------------------------------------
+class TfrnCalc : public TForm
+{
+__published:	// IDE-managed Components
+	TToolBar *ToolBar1;
+	TEdit *Edit_Formula;
+	TGridPanel *GridPanel1;
+	TEdit *Edit_Input;
+	TButton *Button1;
+	TGridPanel *GridPanel2;
+	TButton *Button_Plus;
+	TButton *Button_Minus;
+	TButton *Button_Multiplication;
+	TButton *Button_Divide;
+	TButton *Button_Back;
+	TFrame1 *TFrame11;
+	TButton *Button_Equal;
+	TImageList *ImageList1;
+
+	void __fastcall Calc_ButtonClick(TObject *Sender);
+	void __fastcall Operator_ButtonClick(TObject *Sender);
+private:	// User declarations
+public:		// User declarations
+	__fastcall TfrnCalc(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TfrnCalc *frnCalc;
+//---------------------------------------------------------------------------
+#endif
